@@ -38,7 +38,7 @@ Class GoogleMapApiServerSide{
   }
   function get_suggestion_place($searchterm,$type='object'){
     $searchterm=str_replace(" ", "%20", $searchterm);
-    $url = 'https://maps.googleapis.com/maps/api/place/autocomplete/json?&types=geocode&sensor=true&language=en&location=&radius=12000&input='.$searchterm.'&key='.$this->api_key;
+    $url = 'https://maps.googleapis.com/maps/api/place/autocomplete/json?input='.$searchterm.'&types=establishment&key='.$this->api_key;
     $result=file_get_contents($url);  
     if($type=='object'){
       $details = json_decode($result);
@@ -63,11 +63,11 @@ Class GoogleMapApiServerSide{
   }
 }
 $g=new GoogleMapApiServerSide();
-// echo $g->get_detail_place_by_searchterm("monas jakarta indonesia","json");
+ // echo $g->get_detail_place_by_searchterm("bank jateng cabang kudus","json");
 
 // echo $g->get_detail_place_by_lnglat("-6.9843281,110.4093032","json");
 
-// echo $g->get_suggestion_place("beach indonesia","json");
+// echo $g->get_suggestion_place("bank jateng cabang kudus","json");
 
 // echo $g->get_distance_two_place("-6.9843281,110.4093032","-6.9902904,110.4229372","json");
 
