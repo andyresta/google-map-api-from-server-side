@@ -16,6 +16,8 @@ Just implemented in serverside that connect internet, Now client using intranet 
   echo $g->get_detail_place_by_lnglat("-6.9843281,110.4093032","json");
   echo $g->get_suggestion_place("beach indonesia","json");
   echo $g->get_distance_two_place("-6.9843281,110.4093032","-6.9902904,110.4229372","json");
+  // or you can use place_id
+  echo $g->get_distance_two_place("place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE","place_id:ChIJ3S-JXmauEmsRUcIaWtf4MzE","json");
 ?>
 ```
 ## Method description
