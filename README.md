@@ -2,6 +2,10 @@
 Accessing google map from server side with php programming
 you can get location, lng, long, distance between two point, suggesstion from server side.
 
+## For What ?
+several days, i'm handle client / company that using self local intranet. there employee cannot accessing internet, but this company need integrate with google map api. 
+Just implemented in serverside that connect internet, Now client using intranet can integrated google map api.
+
 ## Usage
 ```php
 <?php
